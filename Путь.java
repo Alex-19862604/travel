@@ -14,7 +14,7 @@ public class Secret {
 		if(s1.equalsIgnoreCase("A")) 
 		
 			System.out.println("Возвращаемся к предыдущему маршруту");
-			
+			//модуль возврата
 			
 			
 			
@@ -28,17 +28,17 @@ public class Secret {
 			String s3=sc.nextLine();
 			if(s3.equalsIgnoreCase("1")) {
 			System.out.println("Выбран маршрут 1");
-			
+			//модуль маршрута
 			
 			
 			}else if(s3.equalsIgnoreCase("2")){
 			System.out.println("Выбран маршрут 2");
-			
+			//модуль маршрута
 			
 			
 			}else if(s3.equalsIgnoreCase("3")){
 			System.out.println("Выбран маршрут 3");
+			//модуль маршрута
 			
-			
-			
+			//и нужно как-то зациклить прогу на выборе функций,типа после окончания маршрута возврат к выбору
 			
