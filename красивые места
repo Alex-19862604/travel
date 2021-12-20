@@ -1,0 +1,112 @@
+elif call.data == "wc2":  # выбор 2 маршрута
+        key_n = types.InlineKeyboardButton(text='Продолжить', callback_data='22')
+        keyboard.add(key_n)
+        key_return = types.InlineKeyboardButton(text='Вернуться к выбору', callback_data='rc1')
+        keyboard.add(key_return)
+        bot.send_message(call.message.chat.id, """Прекрасный выбор! 
+«Прогулка по красивейшим местам Омска» – это маршрут, созданный для того, чтобы вы смогли насладиться красотой нашего города и, возможно, узнать его с новой стороны. По ходу маршрута вы сможете сделать красивые фотографии или просто наблюдать одни из самых эстетичных мест города. 
+Хотите продолжить?""", reply_markup=keyboard)
+
+    elif call.data == "22":  # 22 достопримечательность
+        key_n = types.InlineKeyboardButton(text='Продолжить', callback_data='23')
+        keyboard.add(key_n)
+        key_return = types.InlineKeyboardButton(text='Вернуться к началу', callback_data='rc1')
+        keyboard.add(key_return)
+        bot.send_message(call.message.chat.id, """1. Птичья гавань
+Адрес: [Енисейская улица, дом 1 корпус 2](https://go.2gis.com/yie22)
+        
+Птичья гавань — природный парк, расположенный в черте города Омска, особо охраняемая территория, наделённая статусом объекта регионального значения. Природно-антропогенное сообщество, имеющее важное значение для экологического каркаса города. Находится на пути миграции птиц, во время осенних перелётов на водоёмах останавливается до трёх тысяч особей. Птичья гавань является объектом исследований омских учёных и, по планам губернатора Омской области, должна стать визитной карточкой города.""", parse_mode='Markdown')
+        pic = 'http://rasfokus.ru/images/photos/medium/aabbf9c1bc22a31f863978a56a7d1452.jpg'
+        bot.send_photo(call.message.chat.id, pic, reply_markup=keyboard)
+        for id in (call.message.message_id - 1, call.message.message_id):
+            bot.delete_message(call.message.chat.id, id)
+
+    elif call.data == "23":  # 23 достопримечательность
+        key_n = types.InlineKeyboardButton(text='Продолжить', callback_data='24')
+        keyboard.add(key_n)
+        key_p = types.InlineKeyboardButton(text='Вернуться назад', callback_data='22')
+        keyboard.add(key_p)
+        key_return = types.InlineKeyboardButton(text='Вернуться к началу', callback_data='rc1')
+        keyboard.add(key_return)
+        bot.send_message(call.message.chat.id, """2. Улица Чокана Валиханова
+Адрес: [улица Чокана Валиханова](https://go.2gis.com/3e3552)
+        
+Улица названа в честь Чокана Валиханова – великого казахского ученого, поэта, писатела и исследователя, выпускника Омского кадетского корпуса. Главная достопримечательность улицы — арт-конструкции из стекла, которые Омичи прозвали кристаллами. Днем они отражают свет, а вечером красиво подсвечиваются, внутри них стоят большие планшеты, где можно узнать всю информацию о памятниках и достопримечательностях города Омска. А еще есть два очень интересных фонтана: водопады, стекающие по граням многогранников. В темное время суток все подсвечивается, а кристаллы с планшетами меняют цвет. Очень много лавочек для отдыха, зелени и цветов. Заканчивается она прекрасной смотровой площадкой, откуда открываются живописные виды на реку Иртыш.""", parse_mode='Markdown')
+        pic = 'https://domoos.ru/images/goroda/places/omsk/ulica-valihanova.jpg'
+        bot.send_photo(call.message.chat.id, pic, reply_markup=keyboard)
+        for id in (call.message.message_id - 1, call.message.message_id):
+            bot.delete_message(call.message.chat.id, id)
+
+    elif call.data == "24":  # 24 достопримечательность
+        key_n = types.InlineKeyboardButton(text='Продолжить', callback_data='25')
+        keyboard.add(key_n)
+        key_p = types.InlineKeyboardButton(text='Вернуться назад', callback_data='23')
+        keyboard.add(key_p)
+        key_return = types.InlineKeyboardButton(text='Вернуться к началу', callback_data='rc1')
+        keyboard.add(key_return)
+        bot.send_message(call.message.chat.id, """3. Иртышская набережная
+Адрес: [улица Иртышская Набережная](https://go.2gis.com/xiq9c)
+        
+Мощеная Иртышская набережная — одна из самых популярных прогулочных улиц в Омске. Пешеходная ее часть протянулась вдоль реки Иртыш и имеет в длину почти 4 километра. В прошлом веке ее название было — улица Береговая. Живописные панорамы, открывающиеся с набережной, делают ее основным местом посещения для прогулок и совершения памятных фотографий жителями города, молодоженами и, конечно же, гостями города. Вдоль пешеходной улицы, параллельно ей, проходит автомобильная дорога с одноименным названием. Протянулась она от улицы Чкалова (в районе Куйбышевского пляжа) до улицы Рождественского.""", parse_mode='Markdown')
+        pic = 'https://must-see.top/wp-content/uploads/2018/11/irtyshskaya-naberezhnaya-v-omske.jpg'
+        bot.send_photo(call.message.chat.id, pic, reply_markup=keyboard)
+        for id in (call.message.message_id - 1, call.message.message_id):
+            bot.delete_message(call.message.chat.id, id)
+
+    elif call.data == "25":  # 25 достопримечательность
+        key_n = types.InlineKeyboardButton(text='Продолжить', callback_data='26')
+        keyboard.add(key_n)
+        key_p = types.InlineKeyboardButton(text='Вернуться назад', callback_data='24')
+        keyboard.add(key_p)
+        key_return = types.InlineKeyboardButton(text='Вернуться к началу', callback_data='rc1')
+        keyboard.add(key_return)
+        bot.send_message(call.message.chat.id, """4. Улица Ленина
+Адрес: [улица Ленина](https://go.2gis.com/dwkwo)
+        
+Улица Ленина — центральная улица города Омска, расположенная в районе исторической застройки. Проходит от Соборной площади через Юбилейный мост до ул. Маяковского параллельно проспекту К. Маркса. Здесь сохранился единственный в своём роде архитектурный ансамбль конца XIX — начала XX вв., получивший статус исторического памятника федерального значения и являющийся достопримечательностью города. В праздничные дни движение транспорта по улице Ленина перекрывается для народных гуляний.""", parse_mode='Markdown')
+        pic = 'https://kraskimira-nsk.ru/wp-content/uploads/2020/09/omsk_ul-lenina.jpg'
+        bot.send_photo(call.message.chat.id, pic, reply_markup=keyboard)
+        for id in (call.message.message_id - 1, call.message.message_id):
+            bot.delete_message(call.message.chat.id, id)
+
+    elif call.data == "26":  # 26 достопримечательность
+        key_n = types.InlineKeyboardButton(text='Продолжить', callback_data='27')
+        keyboard.add(key_n)
+        key_p = types.InlineKeyboardButton(text='Вернуться назад', callback_data='25')
+        keyboard.add(key_p)
+        key_return = types.InlineKeyboardButton(text='Вернуться к началу', callback_data='rc1')
+        keyboard.add(key_return)
+        bot.send_message(call.message.chat.id, """5. Площадь Бухгольца
+Адрес: [площадь Бухгольца](https://go.2gis.com/bj6c7)
+        
+Площадь Бухгольца - центральная площадь Омска, место прогулок и отдыха горожан. Она расположена в самом центре города, вблизи от речного вокзала. История площади связана с историей Омска, именно здесь в начале XVIII столетия была заложена крепость. От крепости со временем не осталось никаких следов. Во время Гражданской войны на месте сегодняшней площади во время пребывания в Омске штаба А.В. Колчака была установлена радиомачта. Это еще один любопытный сюжет из истории, ведь обслуживанием этой радиомачты занимался инженер Зворыкин, прославившийся тем, что во время эмиграции в Америку, изобрел телевидение. Мачта была снесена коммунистами, но история осталась.""", parse_mode='Markdown')
+        pic = 'https://pbs.twimg.com/media/Dn7bPMPXcAAJHMx.jpg:large'
+        bot.send_photo(call.message.chat.id, pic, reply_markup=keyboard)
+        for id in (call.message.message_id - 1, call.message.message_id):
+            bot.delete_message(call.message.chat.id, id)
+
+    elif call.data == "27":  # 27 достопримечательность
+        key_n = types.InlineKeyboardButton(text='Продолжить', callback_data='28')
+        keyboard.add(key_n)
+        key_p = types.InlineKeyboardButton(text='Вернуться назад', callback_data='26')
+        keyboard.add(key_p)
+        key_return = types.InlineKeyboardButton(text='Вернуться к началу', callback_data='rc1')
+        keyboard.add(key_return)
+        bot.send_message(call.message.chat.id, """6. Омская крепость
+Адрес: [Партизанская, 5а](https://go.2gis.com/g88sp)
+        
+Омская крепость — сторожевое укрепление Сибирской линии, возведенной в XVIII—XIX веках для защиты южных границ от набегов кочевников. С постройки первой крепости, воздвигнутой в 1716 году в виду двух редутов, началась история города Омск. Благодаря наличию крепости Омск стал главным городом Западной Сибири.""", parse_mode='Markdown')
+        pic = 'http://1.bp.blogspot.com/-Y6F8-Yi04uQ/Tk1Fi4fFivI/AAAAAAAACUU/zni_oZOSRJ8/s1600/DSC_0180.jpg'
+        bot.send_photo(call.message.chat.id, pic, reply_markup=keyboard)
+        for id in (call.message.message_id - 1, call.message.message_id):
+            bot.delete_message(call.message.chat.id, id)
+
+    elif call.data == "28":  # 28 достопримечательность
+        key_n = types.InlineKeyboardButton(text='Продолжить', callback_data='29')
+        keyboard.add(key_n)
+        key_p = types.InlineKeyboardButton(text='Вернуться назад', callback_data='27')
+        keyboard.add(key_p)
+        key_return = types.InlineKeyboardButton(text='Вернуться к началу', callback_data='rc1')
+        keyboard.add(key_return)
+        bot.send_message(call.message.chat.id, """7. Библиотека им Пушкина
+Адрес: [улица Красный Путь, 11](https://go.2gis.com/ys6s0)
