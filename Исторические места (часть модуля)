@@ -1,0 +1,103 @@
+elif call.data == "1":  # 1 достопримечательность
+        key_n = types.InlineKeyboardButton(text='Продолжить', callback_data='2')
+        keyboard.add(key_n)
+        key_return = types.InlineKeyboardButton(text='Вернуться к началу', callback_data='rc1')
+        keyboard.add(key_return)
+        bot.send_message(call.message.chat.id, """1. Омская крепость
+Адрес: [Партизанская ул., 5А](https://go.2gis.com/nme6na)
+Омская крепость – историко-культурный туристический комплекс, состоящий из реконструированных и восстановленных фрагментов форпоста, с которого началась славная история Омска. Самая первая крепость была построена в начале 18 столетия, вторая, гораздо большей площади – спустя полвека. Одной из ярких достопримечательностей исторического комплекса является дом, в котором некогда жил комендант крепости. На территории комплекса работает музей воинской славы, под открытым небом выставлена боевая техника. Здесь можно посетить тематическую выставку или в кинозале посмотреть документальный фильм о городе.""", parse_mode='Markdown')
+        pic = 'https://d1ualep0003st.cloudfront.net/uploads/cards/images/xlarge/3e/34/ff332602-5b1f-11e7-9498-000000000000.jpg'
+        bot.send_photo(call.message.chat.id, pic, reply_markup=keyboard)
+        for id in (call.message.message_id - 1, call.message.message_id):
+            bot.delete_message(call.message.chat.id, id)
+
+    elif call.data == "2":  # 2 достопримечательность
+        key_n = types.InlineKeyboardButton(text='Продолжить', callback_data='3')
+        keyboard.add(key_n)
+        key_p = types.InlineKeyboardButton(text='Вернуться назад', callback_data='1')
+        keyboard.add(key_p)
+        key_return = types.InlineKeyboardButton(text='Вернуться к началу', callback_data='rc1')
+        keyboard.add(key_return)
+        bot.send_message(call.message.chat.id, """2. Тарские ворота
+Адрес: [Спартаковская ул.](https://go.2gis.com/gxjov)
+Тарские ворота – один из символов города. Они известны тем, что через них проходил ссыльный Федор Достоевский, который отбывал каторгу в Омском остроге. 
+Ворота были построены в 1792 году в качестве входа в Степной бастион крепости, в которой располагался каторжный острог. В 1959 году ворота были уничтожены из-за того, что они не вписывались в окружающий ландшафт, но позже ворота отстроили на новом месте. Новые ворота были построены в 1991 году с некоторыми отклонениями от своего оригинала. Внутри свода вместо двух ниш были сделаны четыре ниши. В одной из ниш была встроена дверь на лестницу, ведущую в караульную комнату площадью 30 квадратных метров.""", parse_mode='Markdown')
+        pic = 'https://prigorod.info/images/places/omskaya-oblast/arhitekturnye-ob-ekty/tarskie-vorota-v-omske/3.jpg'
+        bot.send_photo(call.message.chat.id, pic, reply_markup=keyboard)
+        for id in (call.message.message_id - 1, call.message.message_id):
+            bot.delete_message(call.message.chat.id, id)
+
+    elif call.data == "3":  # 3 достопримечательность
+        key_n = types.InlineKeyboardButton(text='Продолжить', callback_data='4')
+        keyboard.add(key_n)
+        key_p = types.InlineKeyboardButton(text='Вернуться назад', callback_data='2')
+        keyboard.add(key_p)
+        key_return = types.InlineKeyboardButton(text='Вернуться к началу', callback_data='rc1')
+        keyboard.add(key_return)
+        bot.send_message(call.message.chat.id, """3. Успенский собор
+Адрес: [Тарская ул., 7](https://go.2gis.com/lt8jo)
+Самый важный храм Омска, один из самых красивых и величественных в России, Свято-Успенский кафедральный собор признан уникальным памятником русского зодчества. Церковь была возведена на излете 19 века, в основе – проект знаменитого Санкт-Петербургского Храма Спаса-на-Крови. После октябрьской революции Свято-Успенский кафедральный собор разделил участь большинства культовых сооружений. При восстановлении церкви в 2000-е годы были обнаружены иконы и мощи архиепископа Сильвестра Сибирского, расстрелянного большевиками и канонизированного епархией как новомученик. Сейчас старинные иконы и рака с мощами святого хранятся в здании собора.""", parse_mode='Markdown')
+        pic = 'https://tripplanet.ru/wp-content/uploads/europe/russia/omsk/holy-assumption-cathedral.jpg'
+        bot.send_photo(call.message.chat.id, pic, reply_markup=keyboard)
+        for id in (call.message.message_id - 1, call.message.message_id):
+            bot.delete_message(call.message.chat.id, id)
+
+    elif call.data == "4":  # 4 достопримечательность
+        key_n = types.InlineKeyboardButton(text='Продолжить', callback_data='5')
+        keyboard.add(key_n)
+        key_p = types.InlineKeyboardButton(text='Вернуться назад', callback_data='3')
+        keyboard.add(key_p)
+        key_return = types.InlineKeyboardButton(text='Вернуться к началу', callback_data='rc1')
+        keyboard.add(key_return)
+        bot.send_message(call.message.chat.id, """4. Омский гос академ театр
+Адрес: [ул. Ленина, 8А](https://go.2gis.com/advou)
+Омский академический театр драмы – старейший драмтеатр в Сибири, принявший первых зрителей в 1875 году. Оно получилось эклектичным, классическая основа декорирована сложными, замысловатыми элементами в стиле барокко. В нишах установлены бюсты великих русских писателей, а фронтон украшает оригинальная скульптура работы чешского мастера Винклера «Крылатый гений» – фигурка ангела, словно парящая в воздухе. Основа репертуара театра – спектакли по классическим произведениям, но есть и современные, экспериментальные постановки. Театр не единожды получал престижные награды.""", parse_mode='Markdown')
+        pic = 'http://s3.fotokto.ru/photo/full/218/2183958.jpg'
+        bot.send_photo(call.message.chat.id, pic, reply_markup=keyboard)
+        for id in (call.message.message_id - 1, call.message.message_id):
+            bot.delete_message(call.message.chat.id, id)
+
+ elif call.data == "10":  # 10 достопримечательность
+        key_n = types.InlineKeyboardButton(text='Продолжить', callback_data='11')
+        keyboard.add(key_n)
+        key_p = types.InlineKeyboardButton(text='Вернуться назад', callback_data='9')
+        keyboard.add(key_p)
+        key_return = types.InlineKeyboardButton(text='Вернуться к началу', callback_data='rc1')
+        keyboard.add(key_return)
+        bot.send_message(call.message.chat.id, """10. Дом Хлебникова
+Адрес: [ул. Почтовая, д. 27 / ул. Сажинская, д. 45](https://go.2gis.com/srkv2g)
+Дом был построен по проекту Арсения Хлебникова — общественного деятеля, адвоката и музыканта, которого выселили в Сибирь в 1887 году. В здании не раз проходили литературно-музыкальные вечера, которые посещали выдающиеся люди города: музыкант Виссарион Шебалин, ученый Пётр Драверт, поэт Леонид Мартынов. В доме общей площадью 250 квадратных метров были два кабинета, столовая, гостиная, две детских и одна спальня родителей, кухня и веранда, которая выходила в сад. К северному фасаду здания со стороны кухни были пристроены сени. Кроме того, дом был оформлен резными гирляндами растительного орнамента с элементами модерна.""", parse_mode='Markdown')
+        pic = 'https://ic.pics.livejournal.com/irma_wurst/55276046/9922/9922_900.jpg'
+        bot.send_photo(call.message.chat.id, pic, reply_markup=keyboard)
+        for id in (call.message.message_id - 1, call.message.message_id):
+            bot.delete_message(call.message.chat.id, id)
+
+ elif call.data == "11":  # 11 достопримечательность
+        key_n = types.InlineKeyboardButton(text='Продолжить', callback_data='12')
+        keyboard.add(key_n)
+        key_p = types.InlineKeyboardButton(text='Вернуться назад', callback_data='10')
+        keyboard.add(key_p)
+        key_return = types.InlineKeyboardButton(text='Вернуться к началу', callback_data='rc1')
+        keyboard.add(key_return)
+        bot.send_message(call.message.chat.id, """11. Парк Победы
+Адрес: [ул. Андрианова, 3](https://go.2gis.com/e2af7t)
+Самая масштабная по площади (более 70 га) благоустроенная зеленая зона Омска – парк культуры и отдыха имени 30-летия ВЛКСМ. Парк был заложен в 1940 году на месте лесного массива как Центральный, а в юбилейный для советской молодежи год получил название, используемое и поныне. Парк – место знаковое, многие омичи в летний воскресный день 1941 года именно здесь услышали горькую и страшную новость о нападении Германии на СССР. Сегодня \"комсомольский\" парк целиком и полностью ориентирован на комфортный отдых и беззаботное времяпрепровождение. Среди густых зарослей парка и вокруг пруда проложены удобные аллеи, работает масса аттракционов.""", parse_mode='Markdown')
+        pic = 'https://tripplanet.ru/wp-content/uploads/europe/russia/omsk/park-of-culture-and-leisure-named-after-the-30th-anniversary-of-the-komsomol.jpg'
+        bot.send_photo(call.message.chat.id, pic, reply_markup=keyboard)
+        for id in (call.message.message_id - 1, call.message.message_id):
+            bot.delete_message(call.message.chat.id, id)
+
+ elif call.data == "21":  # 21 достопримечательность
+        key_end = types.InlineKeyboardButton(text='Закончить', callback_data='end')
+        keyboard.add(key_end)
+        key_p = types.InlineKeyboardButton(text='Вернуться назад', callback_data='20')
+        keyboard.add(key_p)
+        key_return = types.InlineKeyboardButton(text='Вернуться к началу', callback_data='rc1')
+        keyboard.add(key_return)
+        bot.send_message(call.message.chat.id, """21. ЖД вокзал
+Адрес: [ул. Леконта, 1](https://go.2gis.com/4chcw)
+Омский ЖД вокзал был построен к 1896 году, в то же время, когда велось строительство Транссибирской магистрали. Это было одноэтажное здание с одним корпусом, таким сооружение просуществовало до 1914 года. С началом первой мировой войны пассажиропоток увеличился, активизировалась военная промышленность, и нагрузка на транспортную систему возросла. К 1958 реконструкция была завершена, и у вокзала появилось 3 этажа, изменился и внешний вид вокзала, возросло число направлений электропоездов. В 2004 году рядом с главным зданием построили второй корпус – пригородный вокзал.""", parse_mode='Markdown')
+        pic = 'https://vokzalomsk.ru/wp-content/uploads/omsk.jpg'
+        bot.send_photo(call.message.chat.id, pic, reply_markup=keyboard)
+        for id in (call.message.message_id - 1, call.message.message_id):
+            bot.delete_message(call.message.chat.id, id)
